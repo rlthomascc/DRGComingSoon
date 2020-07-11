@@ -52,6 +52,7 @@ class Home extends Component {
 
   comingSoons(){
     this.refresh();
+    console.log(this.state)
     if (this.state.listings.length == 0) {
       return (
         <div className="coming-soon-table">
