@@ -286,6 +286,7 @@ app.post('/addlisting', (req, res) => {
 
 app.get("/getlistings", (req, res) => {
   db.ComingSoon.find().exec((err, data) => {
+    console.log(data, 'LISTINGSSSSSS')
     res.send(data); 
   })
 })
