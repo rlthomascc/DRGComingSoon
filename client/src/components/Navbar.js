@@ -1,0 +1,53 @@
+/* eslint-disable react/jsx-filename-extension */
+import React from 'react';
+
+
+const Navbar = () => {
+  const nav = () => (
+    // <nav className="navbar navbar-expand-lg navbar-light bg-light col-md" id="topNav">
+
+    //   <img src="https://i.imgur.com/iW9XpX2.png" width="70px" />
+    //   <a className="navbar-brand" href="#">The Del Real Group - Coming Soon Listings</a>
+    //   <ul className="nav flex-row navbar-nav mr-auto">
+    //   <li className="nav-item">
+    //       <a className="nav-link text-primary font-weight-bold" href="#/">Home</a>
+    //     </li>
+    //     <li className="nav-item">
+    //       <a className="nav-link text-success font-weight-bold" href="#/add-new-listing">Add new listing</a>
+    //     </li>
+    //     <li className="nav-item">
+    //       <a className="nav-link text-danger font-weight-bold" href="#/delete-listing">Remove listing</a>
+    //     </li>
+    //   </ul>
+    // </nav>
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <img className="" src="https://i.imgur.com/iW9XpX2.png" width="70px" />
+      <a className="navbar-brand" href="#">DRG Coming Soon Listings</a>
+      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbarNav" aria-expanded="false">
+        <span className="navbar-toggler-icon"></span>
+      </button>
+      <div className="collapse navbar-collapse navbarNav" id="navbarNav">
+        <ul className="navbar-nav">
+          <li className="nav-item">
+            <a className="nav-link text-primary font-weight-bold" href="#/">Home</a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link text-success font-weight-bold" href="#/add-new-listing">Add Listing</a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link text-danger font-weight-bold" href="#/delete-listing">Delete Listing</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  );
+
+
+  return (
+    <div>
+      {nav()}
+    </div>
+  );
+};
+
+export default Navbar;
