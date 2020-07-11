@@ -6,8 +6,7 @@
   "scripts": {
     "build": "webpack",
     "server": "node server/index.js",
-    "start": "webpack && node server/index.js",
-    "react": "webpack -d --watch"
+    "start": "webpack && node server/index.js"
   },
   "heroku-run-build-script": true,
   "author": "Randy Thomas",
@@ -17,12 +16,12 @@
     "babel-loader": "^6.3.2",
     "babel-preset-es2015": "^6.22.0",
     "babel-preset-react": "^6.23.0",
-    "webpack": "^2.2.1",
+    "webpack": "^4.28.3",
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
     "express": "^4.15.0",
     "jquery": "^3.1.1",
-    "mongoose": "^4.9.6",
+    "mongoose": "^5.9.7",
     "react-awesome-modal": "^2.0.5",
     "request": "^2.81.0"
   },
@@ -39,7 +38,9 @@
     "react-router-dom": "^4.3.1",
     "react-scripts": "^2.1.1",
     "style-loader": "^0.23.1",
+    "mongoose": "^5.9.7",
     "twilio": "^3.33.2",
-    "url-loader": "^1.1.2"
+    "url-loader": "^1.1.2",
+    "webpack": "^4.28.3"
   }
 }
