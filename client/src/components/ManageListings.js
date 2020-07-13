@@ -51,50 +51,50 @@ class ManageListings extends Component {
       <div className="form-container">
         <form onSubmit={this.handleSubmit.bind(this)}>
           <div className="form-group">
-            <label>Address</label>
+            <label className="text-light">Address</label>
             <input type="text" className="form-control" id="address" placeholder="1234 Main St. Modesto, CA"/>
           </div>
           <div className="form-group">
-            <label>Brief Description</label>
+            <label className="text-light">Brief Description</label>
             <input type="text" className="form-control" id="desc" placeholder="This home has a pool and solar"/>
           </div>
           <div className="row">
             <div className="col">
-              <label>Price</label>
+              <label className="text-light">Price</label>
               <input type="text" className="form-control" id="price" placeholder="$350000"/>
             </div>
             <div className="col">
-              <label>Live Date / ETA</label>
+              <label className="text-light">Live Date / ETA</label>
               <input type="text" className="form-control" id="eta" placeholder="1/1/20" />
             </div>
             <div className="col">
-              <label>Year</label>
+              <label className="text-light">Year</label>
               <input type="number" className="form-control" id="year" placeholder="2020"/>
             </div>
           </div>
           <br/>
           <div className="row">
             <div className="col">
-              <label>Square Feet</label>
+              <label className="text-light">Square Feet</label>
               <input type="number" className="form-control" id="sqft" placeholder="1123"/>
             </div>
             <div className="col">
-              <label>Bed</label>
+              <label className="text-light">Bed</label>
               <input type="text" className="form-control" id="bed" placeholder="3"/>
             </div>
             <div className="col">
-              <label>Bath</label>
+              <label className="text-light">Bath</label>
               <input type="text" className="form-control" id="bath" placeholder="2"/>
             </div>
           </div>
           <br />
           <div className="row">
             <div className="col">
-              <label>Photo Link</label>
+              <label className="text-light">Photo Link</label>
               <input type="text" className="form-control" id="photoLink" placeholder="http://dropbox.com"/>
             </div>
             <div className="col">
-              <label>Agent</label>
+              <label className="text-light">Agent</label>
               <input type="text" className="form-control" id="agent" placeholder="John Doe"/>
             </div>
           </div>
