@@ -6,8 +6,7 @@
   "scripts": {
     "build": "webpack",
     "server": "node server/index.js",
-    "start": "webpack && node server/index.js",
-    "react": "webpack -d --watch"
+    "start": "webpack && node server/index.js"
   },
   "heroku-run-build-script": true,
   "author": "Randy Thomas",
