@@ -59,6 +59,7 @@ class DeleteListings extends Component {
               <table className="table table-striped">
                 <thead>
                   <tr>
+                    <th scope="col">#</th>
                     <th scope="col">Address</th>
                     <th scope="col">Description</th>
                     <th scope="col">Price</th>
@@ -75,6 +76,7 @@ class DeleteListings extends Component {
                 <tbody>
                 {this.state.listings.map((e, i) => (
                   <tr>
+                    <td>{i}</td>
                     <td id={i}>{e.address}</td>
                     {e.desc.length > 20 && this.state.description !== e._id ? <td>{e.desc.slice(0,20) + "..."}  <a href="#/delete-listing" onClick={() => this.descriptionLength(e._id)}>more</a></td> : this.state.description === e._id  ? <td>{e.desc} <a href="#/delete-listing" onClick={() => this.descriptionLength("")}>less</a></td> : <td>{e.desc}</td>}
                     <td id={i}>{e.price}</td>
