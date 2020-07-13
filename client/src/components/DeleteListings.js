@@ -56,7 +56,7 @@ class DeleteListings extends Component {
         else {
           return (
             <div className="coming-soon-table">
-              <table className="table table-striped table-sm table-hover">
+              <table className="table table-striped table-sm table-hover table-dark">
                 <thead>
                   <tr>
                     <th scope="col">#</th>
