@@ -23,6 +23,7 @@ class Home extends Component {
       redirect: false,
       redirect2: false,
       address: '',
+      description: '',
       listings: [],
     };
   }
@@ -42,6 +43,12 @@ class Home extends Component {
     e.preventDefault();
     this.setState({
     });
+  }
+
+  descriptionLength(e){
+    this.setState({
+      description: e
+    })
   }
 
   refresh() {
@@ -82,7 +89,8 @@ class Home extends Component {
             {this.state.listings.map((e, i) => (
               <tr>
                 <td>{e.address}</td>
-                <td>{e.desc}</td>
+                {e.desc.length > 20 && this.state.description !== e._id ? <td>{e.desc.slice(0,20) + "..."}  <a href="#" onClick={() => this.descriptionLength(e._id)}>more</a></td> : this.state.description === e._id  ? <td>{e.desc} <a href="#" onClick={() => this.descriptionLength("")}>less</a></td> : <td>{e.desc}</td>}
+                {/* <td>{e.desc}</td> */}
                 <td>{e.price}</td>
                 <td>{e.eta}</td>
                 <td>{e.year}</td>

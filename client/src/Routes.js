@@ -8,6 +8,7 @@ import {
 } from 'react-router-dom';
 import Home from './components/Home';
 import ManageListings from './components/ManageListings';
+import EditListings from './components/EditLisings';
 import DeleteListing from './components/DeleteListings';
 
 class Routes extends Component {
@@ -48,6 +49,16 @@ class Routes extends Component {
               )}
             />
           </div>
+          {/* <div>
+            <Route
+              path="/edit-listing"
+              exact
+              strict
+              render={() => (
+                <EditListings address={this.state.address} />
+              )}
+            />
+          </div> */}
           <div>
             <Route
               path="/delete-listing"

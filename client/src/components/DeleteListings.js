@@ -13,6 +13,7 @@ class DeleteListings extends Component {
         super(props);
         this.state = {
           location: false,
+          description: '',
           listings: [],
         };
       }
@@ -36,6 +37,12 @@ class DeleteListings extends Component {
             })
         })
         .catch(err => console.log(err, 'ERRRRR'))
+      }
+
+      descriptionLength(e){
+        this.setState({
+          description: e
+        })
       }
     
       deleteTable(){
@@ -69,7 +76,7 @@ class DeleteListings extends Component {
                 {this.state.listings.map((e, i) => (
                   <tr>
                     <td id={i}>{e.address}</td>
-                    <td id={i}>{e.desc}</td>
+                    {e.desc.length > 20 && this.state.description !== e._id ? <td>{e.desc.slice(0,20) + "..."}  <a href="#/delete-listing" onClick={() => this.descriptionLength(e._id)}>more</a></td> : this.state.description === e._id  ? <td>{e.desc} <a href="#/delete-listing" onClick={() => this.descriptionLength("")}>less</a></td> : <td>{e.desc}</td>}
                     <td id={i}>{e.price}</td>
                     <td id={i}>{e.eta}</td>
                     <td id={i}>{e.year}</td>

@@ -4,22 +4,6 @@ import React from 'react';
 
 const Navbar = () => {
   const nav = () => (
-    // <nav className="navbar navbar-expand-lg navbar-light bg-light col-md" id="topNav">
-
-    //   <img src="https://i.imgur.com/iW9XpX2.png" width="70px" />
-    //   <a className="navbar-brand" href="#">The Del Real Group - Coming Soon Listings</a>
-    //   <ul className="nav flex-row navbar-nav mr-auto">
-    //   <li className="nav-item">
-    //       <a className="nav-link text-primary font-weight-bold" href="#/">Home</a>
-    //     </li>
-    //     <li className="nav-item">
-    //       <a className="nav-link text-success font-weight-bold" href="#/add-new-listing">Add new listing</a>
-    //     </li>
-    //     <li className="nav-item">
-    //       <a className="nav-link text-danger font-weight-bold" href="#/delete-listing">Remove listing</a>
-    //     </li>
-    //   </ul>
-    // </nav>
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <img className="" src="https://i.imgur.com/iW9XpX2.png" width="70px" />
       <a className="navbar-brand" href="#">DRG Coming Soon Listings</a>
@@ -34,6 +18,9 @@ const Navbar = () => {
           <li className="nav-item">
             <a className="nav-link text-success font-weight-bold" href="#/add-new-listing">Add Listing</a>
           </li>
+          {/* <li className="nav-item">
+            <a className="nav-link text-warning font-weight-bold" href="#/edit-listing">Edit Listing</a>
+          </li> */}
           <li className="nav-item">
             <a className="nav-link text-danger font-weight-bold" href="#/delete-listing">Delete Listing</a>
           </li>

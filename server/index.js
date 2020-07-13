@@ -252,35 +252,33 @@ Agent: ${data.agent}`,
 })
 .then(message => console.log(message.sid));
 
-};
 
 //ellie
 client.messages
 .create({
   body: `NEW COMING SOON ALERT!
-
-Address: ${data.address} 
-
-Description: ${data.desc}
-
-SqFt: ${data.sqft} 
-
-ETA: ${data.eta}
-
-Bed: ${data.bed} | Bath: ${data.bath}
-
-Photos: ${data.photoLink}
-
-Price: ${data.price}
-
-Agent: ${data.agent}`,
+  
+  Address: ${data.address} 
+  
+  Description: ${data.desc}
+  
+  SqFt: ${data.sqft} 
+  
+  ETA: ${data.eta}
+  
+  Bed: ${data.bed} | Bath: ${data.bath}
+  
+  Photos: ${data.photoLink}
+  
+  Price: ${data.price}
+  
+  Agent: ${data.agent}`,
   from: '+12092555830',
   to: '+12093032432',
 })
 .then(message => console.log(message.sid));
 
 };
-
 
 app.post('/addlisting', (req, res) => {
   var e = req.body
