@@ -32,21 +32,21 @@ const sms = (data) => {
     .create({
       body: `NEW COMING SOON ALERT!
 
-      Address: ${data.address} 
-  
-      Description / Show Notes: ${data.desc}
-      
-      SqFt: ${data.sqft} 
-      
-      ETA: ${data.eta}
-      
-      Bed: ${data.bed} | Bath: ${data.bath}
-      
-      Photos: ${data.photoLink}
-      
-      Price: ${data.price}
-    
-      Premarket: ${data.premarket}
+Address: ${data.address} 
+
+Description / Show Notes: ${data.desc}
+
+SqFt: ${data.sqft} 
+
+ETA: ${data.eta}
+
+Bed: ${data.bed} | Bath: ${data.bath}
+
+Photos: ${data.photoLink}
+
+Price: ${data.price}
+
+Offer Premarket: ${data.premarket}
 
 Agent: ${data.agent}`,
       from: '+12092555830',
@@ -59,21 +59,21 @@ Agent: ${data.agent}`,
     .create({
       body: `NEW COMING SOON ALERT!
 
-      Address: ${data.address} 
-  
-      Description / Show Notes: ${data.desc}
-      
-      SqFt: ${data.sqft} 
-      
-      ETA: ${data.eta}
-      
-      Bed: ${data.bed} | Bath: ${data.bath}
-      
-      Photos: ${data.photoLink}
-      
-      Price: ${data.price}
-    
-      Premarket: ${data.premarket}
+Address: ${data.address} 
+
+Description / Show Notes: ${data.desc}
+
+SqFt: ${data.sqft} 
+
+ETA: ${data.eta}
+
+Bed: ${data.bed} | Bath: ${data.bath}
+
+Photos: ${data.photoLink}
+
+Price: ${data.price}
+
+Offer Premarket: ${data.premarket}
 
 Agent: ${data.agent}`,
       from: '+12092555830',
@@ -86,21 +86,21 @@ Agent: ${data.agent}`,
     .create({
       body: `NEW COMING SOON ALERT!
 
-      Address: ${data.address} 
-  
-      Description / Show Notes: ${data.desc}
-      
-      SqFt: ${data.sqft} 
-      
-      ETA: ${data.eta}
-      
-      Bed: ${data.bed} | Bath: ${data.bath}
-      
-      Photos: ${data.photoLink}
-      
-      Price: ${data.price}
-    
-      Premarket: ${data.premarket}
+Address: ${data.address} 
+
+Description / Show Notes: ${data.desc}
+
+SqFt: ${data.sqft} 
+
+ETA: ${data.eta}
+
+Bed: ${data.bed} | Bath: ${data.bath}
+
+Photos: ${data.photoLink}
+
+Price: ${data.price}
+
+Offer Premarket: ${data.premarket}
 
 Agent: ${data.agent}`,
       from: '+12092555830',
@@ -113,21 +113,21 @@ Agent: ${data.agent}`,
     .create({
       body: `NEW COMING SOON ALERT!
 
-      Address: ${data.address} 
-  
-      Description / Show Notes: ${data.desc}
-      
-      SqFt: ${data.sqft} 
-      
-      ETA: ${data.eta}
-      
-      Bed: ${data.bed} | Bath: ${data.bath}
-      
-      Photos: ${data.photoLink}
-      
-      Price: ${data.price}
-    
-      Premarket: ${data.premarket}
+Address: ${data.address} 
+
+Description / Show Notes: ${data.desc}
+
+SqFt: ${data.sqft} 
+
+ETA: ${data.eta}
+
+Bed: ${data.bed} | Bath: ${data.bath}
+
+Photos: ${data.photoLink}
+
+Price: ${data.price}
+
+Offer Premarket: ${data.premarket}
 
 Agent: ${data.agent}`,
       from: '+12092555830',
@@ -140,21 +140,21 @@ Agent: ${data.agent}`,
     .create({
       body: `NEW COMING SOON ALERT!
 
-      Address: ${data.address} 
-  
-      Description / Show Notes: ${data.desc}
-      
-      SqFt: ${data.sqft} 
-      
-      ETA: ${data.eta}
-      
-      Bed: ${data.bed} | Bath: ${data.bath}
-      
-      Photos: ${data.photoLink}
-      
-      Price: ${data.price}
-    
-      Premarket: ${data.premarket}
+Address: ${data.address} 
+
+Description / Show Notes: ${data.desc}
+
+SqFt: ${data.sqft} 
+
+ETA: ${data.eta}
+
+Bed: ${data.bed} | Bath: ${data.bath}
+
+Photos: ${data.photoLink}
+
+Price: ${data.price}
+
+Offer Premarket: ${data.premarket}
 
 Agent: ${data.agent}`,
       from: '+12092555830',
@@ -167,21 +167,21 @@ client.messages
 .create({
   body: `NEW COMING SOON ALERT!
 
-  Address: ${data.address} 
-  
-  Description / Show Notes: ${data.desc}
-  
-  SqFt: ${data.sqft} 
-  
-  ETA: ${data.eta}
-  
-  Bed: ${data.bed} | Bath: ${data.bath}
-  
-  Photos: ${data.photoLink}
-  
-  Price: ${data.price}
+Address: ${data.address} 
 
-  Premarket: ${data.premarket}
+Description / Show Notes: ${data.desc}
+
+SqFt: ${data.sqft} 
+
+ETA: ${data.eta}
+
+Bed: ${data.bed} | Bath: ${data.bath}
+
+Photos: ${data.photoLink}
+
+Price: ${data.price}
+
+Offer Premarket: ${data.premarket}
 
 Agent: ${data.agent}`,
   from: '+12092555830',
@@ -194,21 +194,21 @@ client.messages
 .create({
   body: `NEW COMING SOON ALERT!
 
-  Address: ${data.address} 
-  
-  Description / Show Notes: ${data.desc}
-  
-  SqFt: ${data.sqft} 
-  
-  ETA: ${data.eta}
-  
-  Bed: ${data.bed} | Bath: ${data.bath}
-  
-  Photos: ${data.photoLink}
-  
-  Price: ${data.price}
+Address: ${data.address} 
 
-  Premarket: ${data.premarket}
+Description / Show Notes: ${data.desc}
+
+SqFt: ${data.sqft} 
+
+ETA: ${data.eta}
+
+Bed: ${data.bed} | Bath: ${data.bath}
+
+Photos: ${data.photoLink}
+
+Price: ${data.price}
+
+Offer Premarket: ${data.premarket}
 
 Agent: ${data.agent}`,
   from: '+12092555830',
@@ -221,21 +221,21 @@ client.messages
 .create({
   body: `NEW COMING SOON ALERT!
 
-  Address: ${data.address} 
-  
-  Description / Show Notes: ${data.desc}
-  
-  SqFt: ${data.sqft} 
-  
-  ETA: ${data.eta}
-  
-  Bed: ${data.bed} | Bath: ${data.bath}
-  
-  Photos: ${data.photoLink}
-  
-  Price: ${data.price}
+Address: ${data.address} 
 
-  Premarket: ${data.premarket}
+Description / Show Notes: ${data.desc}
+
+SqFt: ${data.sqft} 
+
+ETA: ${data.eta}
+
+Bed: ${data.bed} | Bath: ${data.bath}
+
+Photos: ${data.photoLink}
+
+Price: ${data.price}
+
+Offer Premarket: ${data.premarket}
 
 Agent: ${data.agent}`,
   from: '+12092555830',
@@ -248,21 +248,21 @@ client.messages
 .create({
   body: `NEW COMING SOON ALERT!
 
-  Address: ${data.address} 
-  
-  Description / Show Notes: ${data.desc}
-  
-  SqFt: ${data.sqft} 
-  
-  ETA: ${data.eta}
-  
-  Bed: ${data.bed} | Bath: ${data.bath}
-  
-  Photos: ${data.photoLink}
-  
-  Price: ${data.price}
+Address: ${data.address} 
 
-  Premarket: ${data.premarket}
+Description / Show Notes: ${data.desc}
+
+SqFt: ${data.sqft} 
+
+ETA: ${data.eta}
+
+Bed: ${data.bed} | Bath: ${data.bath}
+
+Photos: ${data.photoLink}
+
+Price: ${data.price}
+
+Offer Premarket: ${data.premarket}
 
 Agent: ${data.agent}`,
   from: '+12092555830',
@@ -276,21 +276,21 @@ client.messages
 .create({
   body: `NEW COMING SOON ALERT!
   
-  Address: ${data.address} 
-  
-  Description / Show Notes: ${data.desc}
-  
-  SqFt: ${data.sqft} 
-  
-  ETA: ${data.eta}
-  
-  Bed: ${data.bed} | Bath: ${data.bath}
-  
-  Photos: ${data.photoLink}
-  
-  Price: ${data.price}
+Address: ${data.address} 
 
-  Premarket: ${data.premarket}
+Description / Show Notes: ${data.desc}
+
+SqFt: ${data.sqft} 
+
+ETA: ${data.eta}
+
+Bed: ${data.bed} | Bath: ${data.bath}
+
+Photos: ${data.photoLink}
+
+Price: ${data.price}
+
+Offer Premarket: ${data.premarket}
   
   Agent: ${data.agent}`,
   from: '+12092555830',
@@ -313,7 +313,7 @@ app.post('/addlisting', (req, res) => {
     year: e.year,
     agent: e.agent,
     eta: e.eta,
-    premarket: e.premarket
+    Offer premarket: e.premarket
   })
   sms({
     address: e.address,
@@ -326,7 +326,7 @@ app.post('/addlisting', (req, res) => {
     year: e.year,
     agent: e.agent,
     eta: e.eta,
-    premarket: e.premarket
+    Offer premarket: e.premarket
   })
   res.sendStatus(200);
 }) 

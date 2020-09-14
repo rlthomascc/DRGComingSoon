@@ -56,7 +56,7 @@ class ManageListings extends Component {
             <input type="text" className="form-control" id="address" placeholder="1234 Main St. Modesto, CA"/>
           </div>
           <div className="form-group">
-            <label className="text-light">Brief Description</label>
+            <label className="text-light">Description / Show Notes</label>
             <input type="text" className="form-control" id="desc" placeholder="This home has a pool and solar"/>
           </div>
           <div className="row">
