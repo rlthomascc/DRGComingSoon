@@ -59,16 +59,17 @@ class DeleteListings extends Component {
               <table className="table table-striped table-sm table-hover table-dark">
                 <thead>
                   <tr>
-                    <th scope="col">#</th>
+                    <th score="col">#</th>
                     <th scope="col">Address</th>
-                    <th scope="col">Description</th>
+                    <th scope="col">Description / Showing Notes</th>
                     <th scope="col">Price</th>
-                    <th scope="col">ETA</th>
+                    <th scope="col">Live Date</th>
                     <th scope="col">Year</th>
                     <th scope="col">Sq. Ft.</th>
                     <th scope="col">Bed</th>
                     <th scope="col">Bath</th>
                     <th scope="col">Photos</th>
+                    <th scope="col">Offer Pre Market</th>
                     <th scope="col">Agent</th>
                     <th scope="col"></th>
                   </tr>
@@ -86,6 +87,7 @@ class DeleteListings extends Component {
                     <td id={i}>{e.bed}</td>
                     <td id={i}>{e.bath}</td>
                     {e.photoLink.length > 0 ? <td><a href={e.photoLink}>photos</a></td> : <td></td>}
+                    <td id={i}>{e.premarket}</td>
                     <td id={i}>{e.agent}</td>
                     <td id={i}><input type="button" className="btn btn-danger" id={e.id} onClick={() => this.handleDelete(e._id)} value="Delete"/></td>
                   </tr>

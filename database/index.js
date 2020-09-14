@@ -30,6 +30,7 @@ const comingSoonSchema = ({
   price: String,
   year: Number,
   eta: String,
+  premarket: String,
   timeStamp: { type: Date, default: Date.now },
 })
 
@@ -49,7 +50,8 @@ function save(e) {
     agent: e.agent,
     price: e.price,
     year: e.year,
-    eta: e.eta
+    eta: e.eta,
+    premarket: e.premarket
   })
   obj.save();
   console.log("Data saved to MongoDB Database");
