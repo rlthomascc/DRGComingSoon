@@ -93,7 +93,6 @@ class Home extends Component {
                 <td>{i}</td>
                 <td>{e.address}</td>
                 {e.desc.length > 20 && this.state.description !== e._id ? <td>{e.desc.slice(0,20) + "..."}  <a href="#" onClick={() => this.descriptionLength(e._id)}>more</a></td> : this.state.description === e._id  ? <td>{e.desc} <a href="#" onClick={() => this.descriptionLength("")}>less</a></td> : <td>{e.desc}</td>}
-                {/* <td>{e.desc}</td> */}
                 <td>{e.price}</td>
                 <td>{e.eta}</td>
                 <td>{e.year}</td>
