@@ -313,7 +313,7 @@ app.post('/addlisting', (req, res) => {
     year: e.year,
     agent: e.agent,
     eta: e.eta,
-    Offer premarket: e.premarket
+    premarket: e.premarket
   })
   sms({
     address: e.address,
@@ -326,7 +326,7 @@ app.post('/addlisting', (req, res) => {
     year: e.year,
     agent: e.agent,
     eta: e.eta,
-    Offer premarket: e.premarket
+    premarket: e.premarket
   })
   res.sendStatus(200);
 }) 
