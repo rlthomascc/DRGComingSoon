@@ -99,7 +99,7 @@ class ManageListings extends Component {
               <input type="text" className="form-control" id="agent" placeholder="John Doe"/>
             </div>
             <div className="col">
-              <label className="text-light">Willing to Sell Pre Market?</label>
+              <label className="text-light">Sell Pre Market?</label>
               {/* <input type="text" className="form-control" id="agent" placeholder="John Doe"/> */}
               <select className="form-control" id="premarket">
                 <option>...</option>

@@ -8,7 +8,6 @@ const db = require('../database/index');
 
 
 
-//const port = 3000;
 const port = process.env.PORT || 3000;
 
 
@@ -21,16 +20,17 @@ const client = require('twilio')(
 );
 
 
+
 app.use(express.static(`${__dirname}/../client/dist`));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 
-const sms = (data) => {
+const sms = (title, data) => {
   //randy
   client.messages
     .create({
-      body: `NEW COMING SOON ALERT!
+      body: `${title}
 
 Address: ${data.address} 
 
@@ -57,7 +57,7 @@ Agent: ${data.agent}`,
     //don
     client.messages
     .create({
-      body: `NEW COMING SOON ALERT!
+      body: `${title}
 
 Address: ${data.address} 
 
@@ -84,7 +84,7 @@ Agent: ${data.agent}`,
     //michael
     client.messages
     .create({
-      body: `NEW COMING SOON ALERT!
+      body: `${title}
 
 Address: ${data.address} 
 
@@ -111,7 +111,7 @@ Agent: ${data.agent}`,
     //carlos
     client.messages
     .create({
-      body: `NEW COMING SOON ALERT!
+      body: `${title}
 
 Address: ${data.address} 
 
@@ -138,7 +138,7 @@ Agent: ${data.agent}`,
     //andy
     client.messages
     .create({
-      body: `NEW COMING SOON ALERT!
+      body: `${title}
 
 Address: ${data.address} 
 
@@ -165,7 +165,7 @@ Agent: ${data.agent}`,
 //patty
 client.messages
 .create({
-  body: `NEW COMING SOON ALERT!
+  body: `${title}
 
 Address: ${data.address} 
 
@@ -192,7 +192,7 @@ Agent: ${data.agent}`,
 //amanda
 client.messages
 .create({
-  body: `NEW COMING SOON ALERT!
+  body: `${title}
 
 Address: ${data.address} 
 
@@ -219,7 +219,7 @@ Agent: ${data.agent}`,
 //jennifer
 client.messages
 .create({
-  body: `NEW COMING SOON ALERT!
+  body: `${title}
 
 Address: ${data.address} 
 
@@ -246,7 +246,7 @@ Agent: ${data.agent}`,
 //daniel
 client.messages
 .create({
-  body: `NEW COMING SOON ALERT!
+  body: `${title}
 
 Address: ${data.address} 
 
@@ -274,7 +274,7 @@ Agent: ${data.agent}`,
 //ellie
 client.messages
 .create({
-  body: `NEW COMING SOON ALERT!
+  body: `${title}
   
 Address: ${data.address} 
 
@@ -315,7 +315,7 @@ app.post('/addlisting', (req, res) => {
     eta: e.eta,
     premarket: e.premarket
   })
-  sms({
+  sms("NEW COMING SOON ALERT!",{
     address: e.address,
     desc: e.desc,
     sqft: e.sqft,
@@ -333,9 +333,43 @@ app.post('/addlisting', (req, res) => {
 
 app.get("/getlistings", (req, res) => {
   db.ComingSoon.find().exec((err, data) => {
-    console.log(data, 'LISTINGSSSSSS')
     res.send(data); 
   })
+})
+
+app.post("/editlisting", (req, res) => {
+  var e = req.body;
+  console.log(e, 'BODY INCOMING');
+  db.ComingSoon.find({ _id: e._id }).remove().exec((err, data) => {
+    console.log("Deleted Document");
+  })
+  db.save({
+    address: e.address,
+    desc: e.desc,
+    sqft: e.sqft,
+    bed: e.bed,
+    bath: e.bath,
+    photoLink: e.photoLink,
+    price: e.price,
+    year: e.year,
+    agent: e.agent,
+    eta: e.eta,
+    premarket: e.premarket
+  })
+  sms("UPDATED COMING SOON INFO", {
+    address: e.address,
+    desc: e.desc,
+    sqft: e.sqft,
+    bed: e.bed,
+    bath: e.bath,
+    photoLink: e.photoLink,
+    price: e.price,
+    year: e.year,
+    agent: e.agent,
+    eta: e.eta,
+    premarket: e.premarket
+  })
+  res.sendStatus(200);
 })
 
 app.post('/deletelisting', (req, res) => {

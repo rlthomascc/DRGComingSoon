@@ -49,7 +49,7 @@ class Routes extends Component {
               )}
             />
           </div>
-          {/* <div>
+          <div>
             <Route
               path="/edit-listing"
               exact
@@ -58,7 +58,7 @@ class Routes extends Component {
                 <EditListings address={this.state.address} />
               )}
             />
-          </div> */}
+          </div>
           <div>
             <Route
               path="/delete-listing"

@@ -1,6 +1,8 @@
 require('dotenv').config();
 const mongoose = require('mongoose');
 // dev
+
+
 mongoose.connect(process.env.mongourl, {
   reconnectTries: 100,
   reconnectInterval: 500,
@@ -18,7 +20,6 @@ db.once('open', () => {
 });
 
 // schemas
-
 const comingSoonSchema = ({
   address: String,
   desc: String,
