@@ -88,7 +88,7 @@ class Home extends Component {
     })
 
     updated.status = status;
-    
+
     axios.post('/editlisting', updated)
     .then(e => {
       console.log(e)
@@ -186,7 +186,7 @@ class Home extends Component {
               </tr>
             </thead>
             <tbody>
-            {this.state.listings.map((e, i) => (
+            {this.state.listings.map((e, i) => ( e.status === "Coming Soon" ?
               <tr>
                 <td >{i}</td>
                 <td >{e.address}</td>
@@ -203,7 +203,7 @@ class Home extends Component {
                 <td>{e.agent}</td>
                 <td><a className="btn-sm btn-primary" onClick={() => this.edit(e._id)}>Edit</a></td>
               </tr>
-            ))}
+            : null ))}
             </tbody>
           </table>
         </div>
