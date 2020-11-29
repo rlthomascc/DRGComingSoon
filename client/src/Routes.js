@@ -10,6 +10,7 @@ import Home from './components/Home';
 import ManageListings from './components/ManageListings';
 import EditListings from './components/EditLisings';
 import DeleteListing from './components/DeleteListings';
+import ActiveListings from './components/ActiveListings';
 
 class Routes extends Component {
   constructor(props) {
@@ -66,6 +67,16 @@ class Routes extends Component {
               strict
               render={() => (
                 <DeleteListing address={this.state.address} />
+              )}
+            />
+          </div>
+          <div>
+            <Route
+              path="/active-listings"
+              exact
+              strict
+              render={() => (
+                <ActiveListings address={this.state.address} />
               )}
             />
           </div>

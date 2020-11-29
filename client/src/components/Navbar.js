@@ -18,11 +18,11 @@ const Navbar = () => {
           <li className="nav-item">
             <a className="nav-link text-success font-weight-bold" href="#/add-new-listing">Add Listing</a>
           </li>
-          {/* <li className="nav-item">
-            <a className="nav-link text-warning font-weight-bold" href="#/edit-listing">Edit Listing</a>
-          </li> */}
           <li className="nav-item">
             <a className="nav-link text-danger font-weight-bold" href="#/delete-listing">Delete Listing</a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link text-warning font-weight-bold" href="#/active-listings">Active Listings</a>
           </li>
         </ul>
       </div>

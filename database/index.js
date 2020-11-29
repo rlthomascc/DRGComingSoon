@@ -2,6 +2,7 @@ require('dotenv').config();
 const mongoose = require('mongoose');
 // dev
 
+// process.env.mongourl
 
 mongoose.connect(process.env.mongourl, {
   reconnectTries: 100,
@@ -32,6 +33,7 @@ const comingSoonSchema = ({
   year: Number,
   eta: String,
   premarket: String,
+  status: String,
   timeStamp: { type: Date, default: Date.now },
 })
 
@@ -52,6 +54,7 @@ function save(e) {
     price: e.price,
     year: e.year,
     eta: e.eta,
+    status: e.status,
     premarket: e.premarket
   })
   obj.save();

@@ -35,6 +35,7 @@ class ManageListings extends Component {
       price: value.price.value,
       eta: value.eta.value,
       year: value.year.value,
+      status: value.status.value,
       premarket: value.premarket.value
     })
     .then(e => {
@@ -99,8 +100,15 @@ class ManageListings extends Component {
               <input type="text" className="form-control" id="agent" placeholder="John Doe"/>
             </div>
             <div className="col">
+              <label className="text-light">Market Status</label>
+              <select className="form-control" id="status">
+                <option>Coming Soon</option>
+                <option>Active</option>
+                <option>Pending</option>
+              </select>
+            </div>
+            <div className="col">
               <label className="text-light">Sell Pre Market?</label>
-              {/* <input type="text" className="form-control" id="agent" placeholder="John Doe"/> */}
               <select className="form-control" id="premarket">
                 <option>...</option>
                 <option>Yes</option>

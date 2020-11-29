@@ -8,18 +8,15 @@ const db = require('../database/index');
 
 
 
+//const port = 3000;
 const port = process.env.PORT || 3000;
 
-
 const app = express();
-
 
 const client = require('twilio')(
   process.env.sid, //sid
   process.env.token, // TOKEN
 );
-
-
 
 app.use(express.static(`${__dirname}/../client/dist`));
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -46,6 +43,8 @@ Photos: ${data.photoLink}
 
 Price: ${data.price}
 
+Status: ${data.status}
+
 Offer Premarket: ${data.premarket}
 
 Agent: ${data.agent}`,
@@ -54,249 +53,267 @@ Agent: ${data.agent}`,
     })
     .then(message => console.log(message.sid));
     
-    //don
-    client.messages
-    .create({
-      body: `${title}
+//     //don
+//     client.messages
+//     .create({
+//       body: `${title}
 
-Address: ${data.address} 
+// Address: ${data.address} 
 
-Description / Show Notes: ${data.desc}
+// Description / Show Notes: ${data.desc}
 
-SqFt: ${data.sqft} 
+// SqFt: ${data.sqft} 
 
-ETA: ${data.eta}
+// ETA: ${data.eta}
 
-Bed: ${data.bed} | Bath: ${data.bath}
+// Bed: ${data.bed} | Bath: ${data.bath}
 
-Photos: ${data.photoLink}
+// Photos: ${data.photoLink}
 
-Price: ${data.price}
+// Price: ${data.price}
 
-Offer Premarket: ${data.premarket}
+// Status: ${data.status}
 
-Agent: ${data.agent}`,
-      from: '+12092555830',
-      to: '+12094958907',
-    })
-    .then(message => console.log(message.sid));
+// Offer Premarket: ${data.premarket}
 
-    //michael
-    client.messages
-    .create({
-      body: `${title}
+// Agent: ${data.agent}`,
+//       from: '+12092555830',
+//       to: '+12094958907',
+//     })
+//     .then(message => console.log(message.sid));
 
-Address: ${data.address} 
+//     //michael
+//     client.messages
+//     .create({
+//       body: `${title}
 
-Description / Show Notes: ${data.desc}
+// Address: ${data.address} 
 
-SqFt: ${data.sqft} 
+// Description / Show Notes: ${data.desc}
 
-ETA: ${data.eta}
+// SqFt: ${data.sqft} 
 
-Bed: ${data.bed} | Bath: ${data.bath}
+// ETA: ${data.eta}
 
-Photos: ${data.photoLink}
+// Bed: ${data.bed} | Bath: ${data.bath}
 
-Price: ${data.price}
+// Photos: ${data.photoLink}
 
-Offer Premarket: ${data.premarket}
+// Price: ${data.price}
 
-Agent: ${data.agent}`,
-      from: '+12092555830',
-      to: '+12093248726',
-    })
-    .then(message => console.log(message.sid));
+// Status: ${data.status}
 
-    //carlos
-    client.messages
-    .create({
-      body: `${title}
+// Offer Premarket: ${data.premarket}
 
-Address: ${data.address} 
+// Agent: ${data.agent}`,
+//       from: '+12092555830',
+//       to: '+12093248726',
+//     })
+//     .then(message => console.log(message.sid));
 
-Description / Show Notes: ${data.desc}
+//     //carlos
+//     client.messages
+//     .create({
+//       body: `${title}
 
-SqFt: ${data.sqft} 
+// Address: ${data.address} 
 
-ETA: ${data.eta}
+// Description / Show Notes: ${data.desc}
 
-Bed: ${data.bed} | Bath: ${data.bath}
+// SqFt: ${data.sqft} 
 
-Photos: ${data.photoLink}
+// ETA: ${data.eta}
 
-Price: ${data.price}
+// Bed: ${data.bed} | Bath: ${data.bath}
 
-Offer Premarket: ${data.premarket}
+// Photos: ${data.photoLink}
 
-Agent: ${data.agent}`,
-      from: '+12092555830',
-      to: '+12096147580',
-    })
-    .then(message => console.log(message.sid));
+// Price: ${data.price}
 
-    //andy
-    client.messages
-    .create({
-      body: `${title}
+// Status: ${data.status}
 
-Address: ${data.address} 
+// Offer Premarket: ${data.premarket}
 
-Description / Show Notes: ${data.desc}
+// Agent: ${data.agent}`,
+//       from: '+12092555830',
+//       to: '+12096147580',
+//     })
+//     .then(message => console.log(message.sid));
 
-SqFt: ${data.sqft} 
+//     //andy
+//     client.messages
+//     .create({
+//       body: `${title}
 
-ETA: ${data.eta}
+// Address: ${data.address} 
 
-Bed: ${data.bed} | Bath: ${data.bath}
+// Description / Show Notes: ${data.desc}
 
-Photos: ${data.photoLink}
+// SqFt: ${data.sqft} 
 
-Price: ${data.price}
+// ETA: ${data.eta}
 
-Offer Premarket: ${data.premarket}
+// Bed: ${data.bed} | Bath: ${data.bath}
 
-Agent: ${data.agent}`,
-      from: '+12092555830',
-      to: '+12092043963',
-    })
-    .then(message => console.log(message.sid));
+// Photos: ${data.photoLink}
 
-//patty
-client.messages
-.create({
-  body: `${title}
+// Price: ${data.price}
 
-Address: ${data.address} 
+// Status: ${data.status}
 
-Description / Show Notes: ${data.desc}
+// Offer Premarket: ${data.premarket}
 
-SqFt: ${data.sqft} 
+// Agent: ${data.agent}`,
+//       from: '+12092555830',
+//       to: '+12092043963',
+//     })
+//     .then(message => console.log(message.sid));
 
-ETA: ${data.eta}
+// //patty
+// client.messages
+// .create({
+//   body: `${title}
 
-Bed: ${data.bed} | Bath: ${data.bath}
+// Address: ${data.address} 
 
-Photos: ${data.photoLink}
+// Description / Show Notes: ${data.desc}
 
-Price: ${data.price}
+// SqFt: ${data.sqft} 
 
-Offer Premarket: ${data.premarket}
+// ETA: ${data.eta}
 
-Agent: ${data.agent}`,
-  from: '+12092555830',
-  to: '+12094806005',
-})
-.then(message => console.log(message.sid));
+// Bed: ${data.bed} | Bath: ${data.bath}
 
-//amanda
-client.messages
-.create({
-  body: `${title}
+// Photos: ${data.photoLink}
 
-Address: ${data.address} 
+// Price: ${data.price}
 
-Description / Show Notes: ${data.desc}
+// Status: ${data.status}
 
-SqFt: ${data.sqft} 
+// Offer Premarket: ${data.premarket}
 
-ETA: ${data.eta}
+// Agent: ${data.agent}`,
+//   from: '+12092555830',
+//   to: '+12094806005',
+// })
+// .then(message => console.log(message.sid));
 
-Bed: ${data.bed} | Bath: ${data.bath}
+// //amanda
+// client.messages
+// .create({
+//   body: `${title}
 
-Photos: ${data.photoLink}
+// Address: ${data.address} 
 
-Price: ${data.price}
+// Description / Show Notes: ${data.desc}
 
-Offer Premarket: ${data.premarket}
+// SqFt: ${data.sqft} 
 
-Agent: ${data.agent}`,
-  from: '+12092555830',
-  to: '+12099888498',
-})
-.then(message => console.log(message.sid));
+// ETA: ${data.eta}
 
-//jennifer
-client.messages
-.create({
-  body: `${title}
+// Bed: ${data.bed} | Bath: ${data.bath}
 
-Address: ${data.address} 
+// Photos: ${data.photoLink}
 
-Description / Show Notes: ${data.desc}
+// Price: ${data.price}
 
-SqFt: ${data.sqft} 
+// Status: ${data.status}
 
-ETA: ${data.eta}
+// Offer Premarket: ${data.premarket}
 
-Bed: ${data.bed} | Bath: ${data.bath}
+// Agent: ${data.agent}`,
+//   from: '+12092555830',
+//   to: '+12099888498',
+// })
+// .then(message => console.log(message.sid));
 
-Photos: ${data.photoLink}
+// //jennifer
+// client.messages
+// .create({
+//   body: `${title}
 
-Price: ${data.price}
+// Address: ${data.address} 
 
-Offer Premarket: ${data.premarket}
+// Description / Show Notes: ${data.desc}
 
-Agent: ${data.agent}`,
-  from: '+12092555830',
-  to: '+12096107070',
-})
-.then(message => console.log(message.sid));
+// SqFt: ${data.sqft} 
 
-//daniel
-client.messages
-.create({
-  body: `${title}
+// ETA: ${data.eta}
 
-Address: ${data.address} 
+// Bed: ${data.bed} | Bath: ${data.bath}
 
-Description / Show Notes: ${data.desc}
+// Photos: ${data.photoLink}
 
-SqFt: ${data.sqft} 
+// Price: ${data.price}
 
-ETA: ${data.eta}
+// Status: ${data.status}
 
-Bed: ${data.bed} | Bath: ${data.bath}
+// Offer Premarket: ${data.premarket}
 
-Photos: ${data.photoLink}
+// Agent: ${data.agent}`,
+//   from: '+12092555830',
+//   to: '+12096107070',
+// })
+// .then(message => console.log(message.sid));
 
-Price: ${data.price}
+// //daniel
+// client.messages
+// .create({
+//   body: `${title}
 
-Offer Premarket: ${data.premarket}
+// Address: ${data.address} 
 
-Agent: ${data.agent}`,
-  from: '+12092555830',
-  to: '+12092040610',
-})
-.then(message => console.log(message.sid));
+// Description / Show Notes: ${data.desc}
 
+// SqFt: ${data.sqft} 
 
-//ellie
-client.messages
-.create({
-  body: `${title}
+// ETA: ${data.eta}
+
+// Bed: ${data.bed} | Bath: ${data.bath}
+
+// Photos: ${data.photoLink}
+
+// Price: ${data.price}
+
+// Status: ${data.status}
+
+// Offer Premarket: ${data.premarket}
+
+// Agent: ${data.agent}`,
+//   from: '+12092555830',
+//   to: '+12092040610',
+// })
+// .then(message => console.log(message.sid));
+
+
+// //ellie
+// client.messages
+// .create({
+//   body: `${title}
   
-Address: ${data.address} 
+// Address: ${data.address} 
 
-Description / Show Notes: ${data.desc}
+// Description / Show Notes: ${data.desc}
 
-SqFt: ${data.sqft} 
+// SqFt: ${data.sqft} 
 
-ETA: ${data.eta}
+// ETA: ${data.eta}
 
-Bed: ${data.bed} | Bath: ${data.bath}
+// Bed: ${data.bed} | Bath: ${data.bath}
 
-Photos: ${data.photoLink}
+// Photos: ${data.photoLink}
 
-Price: ${data.price}
+// Price: ${data.price}
 
-Offer Premarket: ${data.premarket}
+// Status: ${data.status}
+
+// Offer Premarket: ${data.premarket}
   
-  Agent: ${data.agent}`,
-  from: '+12092555830',
-  to: '+12093032432',
-})
-.then(message => console.log(message.sid));
+//   Agent: ${data.agent}`,
+//   from: '+12092555830',
+//   to: '+12093032432',
+// })
+// .then(message => console.log(message.sid));
 
 };
 
@@ -312,6 +329,7 @@ app.post('/addlisting', (req, res) => {
     price: e.price,
     year: e.year,
     agent: e.agent,
+    status: e.status,
     eta: e.eta,
     premarket: e.premarket
   })
@@ -325,6 +343,7 @@ app.post('/addlisting', (req, res) => {
     price: e.price,
     year: e.year,
     agent: e.agent,
+    status: e.status,
     eta: e.eta,
     premarket: e.premarket
   })
@@ -353,6 +372,7 @@ app.post("/editlisting", (req, res) => {
     price: e.price,
     year: e.year,
     agent: e.agent,
+    status: e.status,
     eta: e.eta,
     premarket: e.premarket
   })
@@ -366,6 +386,7 @@ app.post("/editlisting", (req, res) => {
     price: e.price,
     year: e.year,
     agent: e.agent,
+    status: e.status,
     eta: e.eta,
     premarket: e.premarket
   })

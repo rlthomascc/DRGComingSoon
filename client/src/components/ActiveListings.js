@@ -16,17 +16,17 @@ import Navbar from './Navbar';
 import ManageListings from './ManageListings';
 
 
-class Home extends Component {
+class ActiveListings extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      editWindow: false,
-      changeStatus: false,
-      _id: '',
-      address: '',
-      description: '',
-      editObject: {},
-      listings: [],
+        editWindow: false,
+        changeStatus: false,
+        _id: '',
+        address: '',
+        description: '',
+        editObject: {},
+        listings: [],
     };
   }
 
@@ -42,6 +42,24 @@ class Home extends Component {
   }
 
   handleSubmit(e) {
+      console.log("handle submit")
+    e.preventDefault();
+  }
+
+  descriptionLength(e){
+    this.setState({
+      description: e
+    })
+  }
+
+  refresh() {
+    setTimeout(() => {
+      window.location.reload()
+    }, 300000)
+  }
+
+  handleSubmit(e) {
+    console.log("clicked me")
     e.preventDefault();
     var v = e.target;
     var l = this.state.editObject;
@@ -78,6 +96,7 @@ class Home extends Component {
   }
 
   handleStatusChange(e){
+    console.log('status changed')
     e.preventDefault();
     var status = e.target.status.value;
     var s = this.state;
@@ -100,19 +119,118 @@ class Home extends Component {
     })
   }
 
-  descriptionLength(e){
-    this.setState({
-      description: e
-    })
+  activeListings(){
+    this.refresh();
+    if (this.state.listings.length == 0) {
+      return (
+        <div className="coming-soon-table">
+          <p>loading...</p>
+        </div>
+      )
+    }
+    else {
+      return (
+        <div className="active-table">
+            <div className="activeListings">
+                <p className="h4 font-weight-bold text-success">Active Listings</p>
+            </div>
+          <table className="table table-striped table-hover table-dark">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Address</th>
+                <th scope="col">Description / Showing Notes</th>
+                <th scope="col">Price</th>
+                <th scope="col">Live Date</th>
+                <th scope="col">Year</th>
+                <th scope="col">Sq. Ft.</th>
+                <th scope="col">Bed</th>
+                <th scope="col">Bath</th>
+                <th scope="col">Photos</th>
+                <th scope="col">Pre-Market</th>
+                <th scope="col">Status</th>
+                <th scope="col">Agent</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+            {this.state.listings.map((e, i) => ( e.status === "Active" ?
+              <tr>
+                <td >{i}</td>
+                <td >{e.address}</td>
+                {e.desc.length > 20 && this.state.description !== e._id ? <td>{e.desc.slice(0,20) + "..."}  <a href="#/active-listings" onClick={() => this.descriptionLength(e._id)}>more</a></td> : this.state.description === e._id  ? <td>{e.desc} <a href="#/active-listings" onClick={() => this.descriptionLength("")}>less</a></td> : <td>{e.desc}</td>}
+                <td id="price">{e.price}</td>
+                <td>{e.eta}</td>
+                <td>{e.year}</td>
+                <td>{e.sqft}</td>
+                <td>{e.bed}</td>
+                <td>{e.bath}</td>
+                {e.photoLink.length > 0 ? <td><a href={e.photoLink}>photos</a></td> : <td></td>}
+                <td id={i}>{e.premarket}</td>
+                <td><a className="text-light" href="#/active-listings" onClick={() => this.changeStatus(e._id)}>{e.status}</a></td>
+                <td>{e.agent}</td>
+                <td><a className="btn-sm btn-primary" onClick={() => this.edit(e._id)}>Edit</a></td>
+              </tr> 
+            : null ))}
+            </tbody>
+          </table>
+        </div>
+      )
+    }
   }
 
-  refresh() {
-    setTimeout(() => {
-      window.location.reload()
-    }, 300000)
+  pendingListings() {
+    return (
+        <div className="pending-table">
+            <div className="activeListings">
+                <p className="h4 font-weight-bold text-warning">Pending Listings:</p>
+            </div>
+          <table className="table table-striped table-hover table-dark">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Address</th>
+                <th scope="col">Description / Showing Notes</th>
+                <th scope="col">Price</th>
+                <th scope="col">Live Date</th>
+                <th scope="col">Year</th>
+                <th scope="col">Sq. Ft.</th>
+                <th scope="col">Bed</th>
+                <th scope="col">Bath</th>
+                <th scope="col">Photos</th>
+                <th scope="col">Pre-Market</th>
+                <th scope="col">Status</th>
+                <th scope="col">Agent</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+            {this.state.listings.map((e, i) => ( e.status === "Pending" ?
+              <tr>
+                <td >{i}</td>
+                <td >{e.address}</td>
+                {e.desc.length > 20 && this.state.description !== e._id ? <td>{e.desc.slice(0,20) + "..."}  <a href="#/active-listings" onClick={() => this.descriptionLength(e._id)}>more</a></td> : this.state.description === e._id  ? <td>{e.desc} <a href="#/active-listings" onClick={() => this.descriptionLength("")}>less</a></td> : <td>{e.desc}</td>}
+                <td id="price">{e.price}</td>
+                <td>{e.eta}</td>
+                <td>{e.year}</td>
+                <td>{e.sqft}</td>
+                <td>{e.bed}</td>
+                <td>{e.bath}</td>
+                {e.photoLink.length > 0 ? <td><a href={e.photoLink}>photos</a></td> : <td></td>}
+                <td id={i}>{e.premarket}</td>
+                <td><a className="text-light" href="#/active-listings" onClick={() => this.changeStatus(e._id)}>{e.status}</a></td>
+                <td>{e.agent}</td>
+                <td><a className="btn-sm btn-primary" onClick={() => this.edit(e._id)}>Edit</a></td>
+              </tr>
+            : null ))}
+            </tbody>
+          </table>
+        </div>
+    );
   }
 
   edit(e) {
+    console.log("clickedd")
     this.state.listings.map((elem, i) => {
       if(elem._id === e){
         this.setState(
@@ -127,6 +245,7 @@ class Home extends Component {
   }
 
   changeStatus(e) {
+      console.log("clicked meee")
     this.setState({
       changeStatus: true,
       _id: e
@@ -152,63 +271,6 @@ class Home extends Component {
       </form>
     </div>
     )
-  }
-
-  comingSoons(){
-    this.refresh();
-    if (this.state.listings.length == 0) {
-      return (
-        <div className="coming-soon-table">
-          <p>loading...</p>
-        </div>
-      )
-    }
-    else {
-      return (
-        <div className="coming-soon-table">
-          <table className="table table-striped table-hover table-dark">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">Address</th>
-                <th scope="col">Description / Showing Notes</th>
-                <th scope="col">Price</th>
-                <th scope="col">Live Date</th>
-                <th scope="col">Year</th>
-                <th scope="col">Sq. Ft.</th>
-                <th scope="col">Bed</th>
-                <th scope="col">Bath</th>
-                <th scope="col">Photos</th>
-                <th scope="col">Pre-Market</th>
-                <th scope="col">Status</th>
-                <th scope="col">Agent</th>
-                <th scope="col"></th>
-              </tr>
-            </thead>
-            <tbody>
-            {this.state.listings.map((e, i) => (
-              <tr>
-                <td >{i}</td>
-                <td >{e.address}</td>
-                {e.desc.length > 20 && this.state.description !== e._id ? <td>{e.desc.slice(0,20) + "..."}  <a href="#" onClick={() => this.descriptionLength(e._id)}>more</a></td> : this.state.description === e._id  ? <td>{e.desc} <a href="#" onClick={() => this.descriptionLength("")}>less</a></td> : <td>{e.desc}</td>}
-                <td id="price">{e.price}</td>
-                <td>{e.eta}</td>
-                <td>{e.year}</td>
-                <td>{e.sqft}</td>
-                <td>{e.bed}</td>
-                <td>{e.bath}</td>
-                {e.photoLink.length > 0 ? <td><a href={e.photoLink}>photos</a></td> : <td></td>}
-                <td id={i}>{e.premarket}</td>
-                <td><a className="text-light" href="#" onClick={() => this.changeStatus(e._id)}>{e.status}</a></td>
-                <td>{e.agent}</td>
-                <td><a className="btn-sm btn-primary" onClick={() => this.edit(e._id)}>Edit</a></td>
-              </tr>
-            ))}
-            </tbody>
-          </table>
-        </div>
-      )
-    }
   }
 
   editListing() {
@@ -306,33 +368,35 @@ class Home extends Component {
     )
   }
 
-  render() {
-    if (this.state.editWindow === false && this.state.changeStatus === false){
-      return (
-        <div>
-          <Navbar />
-          {this.comingSoons()}
-        </div>
-      );
-    } else if (this.state.editWindow === true && this.state.changeStatus === false) {
-      return (
-        <div>
-          <Navbar />
-          {this.editListing()}
-        </div>
-      );
-    } else if (this.state.editWindow === false && this.state.changeStatus === true) {
-      return (
-        <div>
-          <Navbar />
-          {this.changeStatusWindow()}
-        </div>
-      )
-    } else {
-      null;
-    }
-  }
+
+    render() {
+        if (this.state.editWindow === false && this.state.changeStatus === false){
+          return (
+            <div>
+              <Navbar />
+              {this.activeListings()}
+              {this.pendingListings()}
+            </div>
+          );
+        } else if (this.state.editWindow === true && this.state.changeStatus === false) {
+          return (
+            <div>
+              <Navbar />
+              {this.editListing()}
+            </div>
+          );
+        } else if (this.state.editWindow === false && this.state.changeStatus === true) {
+          return (
+            <div>
+              <Navbar />
+              {this.changeStatusWindow()}
+            </div>
+          )
+        } else {
+          null;
+        }
+      }
 }
 
 
-export default Home;
+export default ActiveListings;
