@@ -53,267 +53,267 @@ Agent: ${data.agent}`,
     })
     .then(message => console.log(message.sid));
     
-//     //don
-//     client.messages
-//     .create({
-//       body: `${title}
+    //don
+    client.messages
+    .create({
+      body: `${title}
 
-// Address: ${data.address} 
+Address: ${data.address} 
 
-// Description / Show Notes: ${data.desc}
+Description / Show Notes: ${data.desc}
 
-// SqFt: ${data.sqft} 
+SqFt: ${data.sqft} 
 
-// ETA: ${data.eta}
+ETA: ${data.eta}
 
-// Bed: ${data.bed} | Bath: ${data.bath}
+Bed: ${data.bed} | Bath: ${data.bath}
 
-// Photos: ${data.photoLink}
+Photos: ${data.photoLink}
 
-// Price: ${data.price}
+Price: ${data.price}
 
-// Status: ${data.status}
+Status: ${data.status}
 
-// Offer Premarket: ${data.premarket}
+Offer Premarket: ${data.premarket}
 
-// Agent: ${data.agent}`,
-//       from: '+12092555830',
-//       to: '+12094958907',
-//     })
-//     .then(message => console.log(message.sid));
+Agent: ${data.agent}`,
+      from: '+12092555830',
+      to: '+12094958907',
+    })
+    .then(message => console.log(message.sid));
 
-//     //michael
-//     client.messages
-//     .create({
-//       body: `${title}
+    //michael
+    client.messages
+    .create({
+      body: `${title}
 
-// Address: ${data.address} 
+Address: ${data.address} 
 
-// Description / Show Notes: ${data.desc}
+Description / Show Notes: ${data.desc}
 
-// SqFt: ${data.sqft} 
+SqFt: ${data.sqft} 
 
-// ETA: ${data.eta}
+ETA: ${data.eta}
 
-// Bed: ${data.bed} | Bath: ${data.bath}
+Bed: ${data.bed} | Bath: ${data.bath}
 
-// Photos: ${data.photoLink}
+Photos: ${data.photoLink}
 
-// Price: ${data.price}
+Price: ${data.price}
 
-// Status: ${data.status}
+Status: ${data.status}
 
-// Offer Premarket: ${data.premarket}
+Offer Premarket: ${data.premarket}
 
-// Agent: ${data.agent}`,
-//       from: '+12092555830',
-//       to: '+12093248726',
-//     })
-//     .then(message => console.log(message.sid));
+Agent: ${data.agent}`,
+      from: '+12092555830',
+      to: '+12093248726',
+    })
+    .then(message => console.log(message.sid));
 
-//     //carlos
-//     client.messages
-//     .create({
-//       body: `${title}
+    //carlos
+    client.messages
+    .create({
+      body: `${title}
 
-// Address: ${data.address} 
+Address: ${data.address} 
 
-// Description / Show Notes: ${data.desc}
+Description / Show Notes: ${data.desc}
 
-// SqFt: ${data.sqft} 
+SqFt: ${data.sqft} 
 
-// ETA: ${data.eta}
+ETA: ${data.eta}
 
-// Bed: ${data.bed} | Bath: ${data.bath}
+Bed: ${data.bed} | Bath: ${data.bath}
 
-// Photos: ${data.photoLink}
+Photos: ${data.photoLink}
 
-// Price: ${data.price}
+Price: ${data.price}
 
-// Status: ${data.status}
+Status: ${data.status}
 
-// Offer Premarket: ${data.premarket}
+Offer Premarket: ${data.premarket}
 
-// Agent: ${data.agent}`,
-//       from: '+12092555830',
-//       to: '+12096147580',
-//     })
-//     .then(message => console.log(message.sid));
+Agent: ${data.agent}`,
+      from: '+12092555830',
+      to: '+12096147580',
+    })
+    .then(message => console.log(message.sid));
 
-//     //andy
-//     client.messages
-//     .create({
-//       body: `${title}
+    //andy
+    client.messages
+    .create({
+      body: `${title}
 
-// Address: ${data.address} 
+Address: ${data.address} 
 
-// Description / Show Notes: ${data.desc}
+Description / Show Notes: ${data.desc}
 
-// SqFt: ${data.sqft} 
+SqFt: ${data.sqft} 
 
-// ETA: ${data.eta}
+ETA: ${data.eta}
 
-// Bed: ${data.bed} | Bath: ${data.bath}
+Bed: ${data.bed} | Bath: ${data.bath}
 
-// Photos: ${data.photoLink}
+Photos: ${data.photoLink}
 
-// Price: ${data.price}
+Price: ${data.price}
 
-// Status: ${data.status}
+Status: ${data.status}
 
-// Offer Premarket: ${data.premarket}
+Offer Premarket: ${data.premarket}
 
-// Agent: ${data.agent}`,
-//       from: '+12092555830',
-//       to: '+12092043963',
-//     })
-//     .then(message => console.log(message.sid));
+Agent: ${data.agent}`,
+      from: '+12092555830',
+      to: '+12092043963',
+    })
+    .then(message => console.log(message.sid));
 
-// //patty
-// client.messages
-// .create({
-//   body: `${title}
+//patty
+client.messages
+.create({
+  body: `${title}
 
-// Address: ${data.address} 
+Address: ${data.address} 
 
-// Description / Show Notes: ${data.desc}
+Description / Show Notes: ${data.desc}
 
-// SqFt: ${data.sqft} 
+SqFt: ${data.sqft} 
 
-// ETA: ${data.eta}
+ETA: ${data.eta}
 
-// Bed: ${data.bed} | Bath: ${data.bath}
+Bed: ${data.bed} | Bath: ${data.bath}
 
-// Photos: ${data.photoLink}
+Photos: ${data.photoLink}
 
-// Price: ${data.price}
+Price: ${data.price}
 
-// Status: ${data.status}
+Status: ${data.status}
 
-// Offer Premarket: ${data.premarket}
+Offer Premarket: ${data.premarket}
 
-// Agent: ${data.agent}`,
-//   from: '+12092555830',
-//   to: '+12094806005',
-// })
-// .then(message => console.log(message.sid));
+Agent: ${data.agent}`,
+  from: '+12092555830',
+  to: '+12094806005',
+})
+.then(message => console.log(message.sid));
 
-// //amanda
-// client.messages
-// .create({
-//   body: `${title}
+//amanda
+client.messages
+.create({
+  body: `${title}
 
-// Address: ${data.address} 
+Address: ${data.address} 
 
-// Description / Show Notes: ${data.desc}
+Description / Show Notes: ${data.desc}
 
-// SqFt: ${data.sqft} 
+SqFt: ${data.sqft} 
 
-// ETA: ${data.eta}
+ETA: ${data.eta}
 
-// Bed: ${data.bed} | Bath: ${data.bath}
+Bed: ${data.bed} | Bath: ${data.bath}
 
-// Photos: ${data.photoLink}
+Photos: ${data.photoLink}
 
-// Price: ${data.price}
+Price: ${data.price}
 
-// Status: ${data.status}
+Status: ${data.status}
 
-// Offer Premarket: ${data.premarket}
+Offer Premarket: ${data.premarket}
 
-// Agent: ${data.agent}`,
-//   from: '+12092555830',
-//   to: '+12099888498',
-// })
-// .then(message => console.log(message.sid));
+Agent: ${data.agent}`,
+  from: '+12092555830',
+  to: '+12099888498',
+})
+.then(message => console.log(message.sid));
 
-// //jennifer
-// client.messages
-// .create({
-//   body: `${title}
+//jennifer
+client.messages
+.create({
+  body: `${title}
 
-// Address: ${data.address} 
+Address: ${data.address} 
 
-// Description / Show Notes: ${data.desc}
+Description / Show Notes: ${data.desc}
 
-// SqFt: ${data.sqft} 
+SqFt: ${data.sqft} 
 
-// ETA: ${data.eta}
+ETA: ${data.eta}
 
-// Bed: ${data.bed} | Bath: ${data.bath}
+Bed: ${data.bed} | Bath: ${data.bath}
 
-// Photos: ${data.photoLink}
+Photos: ${data.photoLink}
 
-// Price: ${data.price}
+Price: ${data.price}
 
-// Status: ${data.status}
+Status: ${data.status}
 
-// Offer Premarket: ${data.premarket}
+Offer Premarket: ${data.premarket}
 
-// Agent: ${data.agent}`,
-//   from: '+12092555830',
-//   to: '+12096107070',
-// })
-// .then(message => console.log(message.sid));
+Agent: ${data.agent}`,
+  from: '+12092555830',
+  to: '+12096107070',
+})
+.then(message => console.log(message.sid));
 
-// //daniel
-// client.messages
-// .create({
-//   body: `${title}
+//daniel
+client.messages
+.create({
+  body: `${title}
 
-// Address: ${data.address} 
+Address: ${data.address} 
 
-// Description / Show Notes: ${data.desc}
+Description / Show Notes: ${data.desc}
 
-// SqFt: ${data.sqft} 
+SqFt: ${data.sqft} 
 
-// ETA: ${data.eta}
+ETA: ${data.eta}
 
-// Bed: ${data.bed} | Bath: ${data.bath}
+Bed: ${data.bed} | Bath: ${data.bath}
 
-// Photos: ${data.photoLink}
+Photos: ${data.photoLink}
 
-// Price: ${data.price}
+Price: ${data.price}
 
-// Status: ${data.status}
+Status: ${data.status}
 
-// Offer Premarket: ${data.premarket}
+Offer Premarket: ${data.premarket}
 
-// Agent: ${data.agent}`,
-//   from: '+12092555830',
-//   to: '+12092040610',
-// })
-// .then(message => console.log(message.sid));
+Agent: ${data.agent}`,
+  from: '+12092555830',
+  to: '+12092040610',
+})
+.then(message => console.log(message.sid));
 
 
-// //ellie
-// client.messages
-// .create({
-//   body: `${title}
+//ellie
+client.messages
+.create({
+  body: `${title}
   
-// Address: ${data.address} 
+Address: ${data.address} 
 
-// Description / Show Notes: ${data.desc}
+Description / Show Notes: ${data.desc}
 
-// SqFt: ${data.sqft} 
+SqFt: ${data.sqft} 
 
-// ETA: ${data.eta}
+ETA: ${data.eta}
 
-// Bed: ${data.bed} | Bath: ${data.bath}
+Bed: ${data.bed} | Bath: ${data.bath}
 
-// Photos: ${data.photoLink}
+Photos: ${data.photoLink}
 
-// Price: ${data.price}
+Price: ${data.price}
 
-// Status: ${data.status}
+Status: ${data.status}
 
-// Offer Premarket: ${data.premarket}
+Offer Premarket: ${data.premarket}
   
-//   Agent: ${data.agent}`,
-//   from: '+12092555830',
-//   to: '+12093032432',
-// })
-// .then(message => console.log(message.sid));
+  Agent: ${data.agent}`,
+  from: '+12092555830',
+  to: '+12093032432',
+})
+.then(message => console.log(message.sid));
 
 };
 
