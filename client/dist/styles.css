@@ -3,6 +3,11 @@ body {
     background-color: #292929;
 }
 
+/* .container {
+    width: 100%;
+    max-width: 100%;
+} */
+
 .nav-link, .nav-icon {
     font-size: 18px
 }
@@ -15,12 +20,13 @@ body {
   
 .navbar-nav > li:hover {
     display: inline-block;
-    /* border-bottom: 4px solid orange; */
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .coming-soon-table {
-    padding: 20px 20px 20px 20px;
+    /* padding: 20px 20px 20px 20px; */
+    padding-top: 120px;
+    padding-bottom: 20px;
 }
 
 .form-container {
@@ -39,6 +45,14 @@ body {
 }
 
 .activeListings {
-    padding: 10px 10px 10px 10px;
+    margin-top: 120px;
+    margin-bottom: 30px;
     text-align: center;
 }
+
+.pendingListings {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+

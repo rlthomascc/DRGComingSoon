@@ -4,7 +4,7 @@ import React from 'react';
 
 const Navbar = () => {
   const nav = () => (
-    <nav className="navbar navbar-expand-lg  navbar-dark bg-dark">
+    <nav className="navbar navbar-fluid navbar-expand-lg navbar-dark bg-dark fixed-top">
       <img className="" src="https://i.imgur.com/iW9XpX2.png" width="70px" />
       <a className="navbar-brand" href="#">DRG Coming Soon Listings</a>
       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbarNav" aria-expanded="false">

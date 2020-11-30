@@ -136,7 +136,7 @@ class ActiveListings extends Component {
             </div>
           <table className="table table-striped table-hover table-dark">
             <thead>
-              <tr>
+              <tr className="container">
                 <th scope="col">#</th>
                 <th scope="col">Address</th>
                 <th scope="col">Description / Showing Notes</th>
@@ -155,9 +155,9 @@ class ActiveListings extends Component {
             </thead>
             <tbody>
             {this.state.listings.map((e, i) => ( e.status === "Active" ?
-              <tr>
-                <td >{i}</td>
-                <td >{e.address}</td>
+              <tr className="container">
+                <td>{i}</td>
+                <td>{e.address}</td>
                 {e.desc.length > 20 && this.state.description !== e._id ? <td>{e.desc.slice(0,20) + "..."}  <a href="#/active-listings" onClick={() => this.descriptionLength(e._id)}>more</a></td> : this.state.description === e._id  ? <td>{e.desc} <a href="#/active-listings" onClick={() => this.descriptionLength("")}>less</a></td> : <td>{e.desc}</td>}
                 <td id="price">{e.price}</td>
                 <td>{e.eta}</td>
@@ -182,7 +182,7 @@ class ActiveListings extends Component {
   pendingListings() {
     return (
         <div className="pending-table">
-            <div className="activeListings">
+            <div className="pendingListings">
                 <p className="h4 font-weight-bold text-warning">Pending Listings:</p>
             </div>
           <table className="table table-striped table-hover table-dark">
