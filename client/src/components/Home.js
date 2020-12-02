@@ -136,6 +136,7 @@ class Home extends Component {
   changeStatusWindow() {
     return (
       <div className="form-container">
+        <br/>
       <p className="text-center text-light"><b>Address: </b>{this.state.listings.map((elem, i) => elem._id === this.state._id ? elem.address : null)}</p>
       <br/>
       <form onSubmit={this.handleStatusChange.bind(this)}>
@@ -156,6 +157,8 @@ class Home extends Component {
 
   comingSoons(){
     this.refresh();
+    this.state.listings.sort((a, b) => (a.address > b.address) ? 1 : -1)
+    var inc = 0;
     if (this.state.listings.length == 0) {
       return (
         <div className="coming-soon-table">
@@ -166,6 +169,10 @@ class Home extends Component {
     else {
       return (
         <div className="coming-soon-table">
+          <div className="comingSoonListings">
+                <p className="h4 text-center font-weight-bold text-success">Coming Soon Listings:</p>
+                <br/>
+            </div>
           <table className="table table-striped table-hover table-dark">
             <thead>
               <tr>
@@ -188,7 +195,7 @@ class Home extends Component {
             <tbody>
             {this.state.listings.map((e, i) => ( e.status === "Coming Soon" ?
               <tr>
-                <td >{i}</td>
+                <td >{inc++}</td>
                 <td >{e.address}</td>
                 {e.desc.length > 20 && this.state.description !== e._id ? <td>{e.desc.slice(0,20) + "..."}  <a href="#" onClick={() => this.descriptionLength(e._id)}>more</a></td> : this.state.description === e._id  ? <td>{e.desc} <a href="#" onClick={() => this.descriptionLength("")}>less</a></td> : <td>{e.desc}</td>}
                 <td id="price">{e.price}</td>

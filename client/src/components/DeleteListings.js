@@ -46,6 +46,8 @@ class DeleteListings extends Component {
       }
     
       deleteTable(){
+        var fields = this.state.listings.sort((a, b) => (a.status > b.status) ? 1 : -1)
+        var inc = 0;
         if (this.state.listings.length == 0) {
           return (
             <div className="coming-soon-table">
@@ -54,12 +56,13 @@ class DeleteListings extends Component {
           )
         }
         else {
+          var fields = this.state.listings.sort((a, b) => (a.status > b.status) ? 1 : -1)
           return (
             <div className="coming-soon-table">
-              <table className="table table-striped table-sm table-hover table-dark">
+              <table className="table table-striped table-hover table-sm table-dark">
                 <thead>
                   <tr>
-                    {/* <th scope="col">#</th> */}
+                    <th scope="col">#</th>
                     <th scope="col">Address</th>
                     <th scope="col">Description / Showing Notes</th>
                     <th scope="col">Price</th>
@@ -76,9 +79,9 @@ class DeleteListings extends Component {
                   </tr>
                 </thead>
                 <tbody>
-                {this.state.listings.map((e, i) => (
+                {fields.map((e, i) => (
                   <tr>
-                    {/* <td>{i}</td> */}
+                    <td>{inc++}</td>
                     <td id={i}>{e.address}</td>
                     {e.desc.length > 20 && this.state.description !== e._id ? <td>{e.desc.slice(0,20) + "..."}  <a href="#/delete-listing" onClick={() => this.descriptionLength(e._id)}>more</a></td> : this.state.description === e._id  ? <td>{e.desc} <a href="#/delete-listing" onClick={() => this.descriptionLength("")}>less</a></td> : <td>{e.desc}</td>}
                     <td id={i}>{e.price}</td>

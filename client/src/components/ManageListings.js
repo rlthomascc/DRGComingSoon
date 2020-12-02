@@ -51,6 +51,10 @@ class ManageListings extends Component {
   homepage() {
     return (
       <div className="form-container">
+        <br/>
+        <div className="pendingListings">
+                <p className="h4 font-weight-bold text-info">Add A Listing:</p>
+            </div>
         <form onSubmit={this.handleSubmit.bind(this)}>
           <div className="form-group">
             <label className="text-light">Address</label>

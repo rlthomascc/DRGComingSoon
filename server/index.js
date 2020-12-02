@@ -11,12 +11,16 @@ const db = require('../database/index');
 //const port = 3000;
 const port = process.env.PORT || 3000;
 
+
 const app = express();
+
 
 const client = require('twilio')(
   process.env.sid, //sid
   process.env.token, // TOKEN
 );
+
+
 
 app.use(express.static(`${__dirname}/../client/dist`));
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -43,7 +47,7 @@ Photos: ${data.photoLink}
 
 Price: ${data.price}
 
-Status: ${data.status}
+// Status: ${data.status}
 
 Offer Premarket: ${data.premarket}
 
