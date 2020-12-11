@@ -365,8 +365,8 @@ app.get("/getlistings", (req, res) => {
 app.post("/editlisting", (req, res) => {
   var e = req.body;
   console.log(e, 'BODY INCOMING');
-  db.ComingSoon.find({ _id: e._id }).remove().exec((err, data) => {
-    console.log("Deleted Document");
+  db.ComingSoon.deleteOne({ _id: req.body.id }).then((res) => {
+    res.send(true);
   })
   db.save({
     address: e.address,
@@ -402,7 +402,7 @@ app.post("/editlisting", (req, res) => {
 app.post('/deletelisting', (req, res) => {
   console.log(req.body.id)
   db.ComingSoon.deleteOne({ _id: req.body.id }).then((res) => {
-    res.send(res);
+    res.send(true);
   })
 })
 

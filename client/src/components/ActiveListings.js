@@ -96,7 +96,6 @@ class ActiveListings extends Component {
   }
 
   handleStatusChange(e){
-    console.log('status changed')
     e.preventDefault();
     var status = e.target.status.value;
     var s = this.state;
@@ -110,7 +109,6 @@ class ActiveListings extends Component {
     
     axios.post('/editlisting', updated)
     .then(e => {
-      console.log(e)
       location.reload();
     })
     .catch(e => {
