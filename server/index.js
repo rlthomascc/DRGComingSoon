@@ -401,8 +401,8 @@ app.post("/editlisting", (req, res) => {
 
 app.post('/deletelisting', (req, res) => {
   console.log(req.body.id)
-  db.ComingSoon.find({ _id: req.body.id }).remove().exec((err, data) => {
-    res.send(data);
+  db.ComingSoon.deleteOne({ _id: req.body.id }).then((res) => {
+    res.send(res);
   })
 })
 
