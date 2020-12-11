@@ -36,7 +36,11 @@ class DeleteListings extends Component {
                 location: true
             })
         })
-        .catch(err => console.log(err, 'ERRRRR'))
+        .catch(err => {
+          this.setState({
+            location: true
+          })
+        })
       }
 
       descriptionLength(e){
