@@ -4,13 +4,7 @@ const mongoose = require('mongoose');
 
 // process.env.mongourl
 
-mongoose.connect(process.env.mongourl, {
-  reconnectTries: 100,
-  reconnectInterval: 500,
-  autoReconnect: true,
-  useNewUrlParser: true,
-  dbName: 'leads',
-})
+mongoose.connect(process.env.mongourl)
   .catch(err => console.log('Mongo connection error', err));
 
 

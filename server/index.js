@@ -22,6 +22,7 @@ const client = require('twilio')(
 
 
 
+
 app.use(express.static(`${__dirname}/../client/dist`));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -47,7 +48,7 @@ Photos: ${data.photoLink}
 
 Price: ${data.price}
 
-// Status: ${data.status}
+Status: ${data.status}
 
 Offer Premarket: ${data.premarket}
 
@@ -356,6 +357,7 @@ app.post('/addlisting', (req, res) => {
 
 app.get("/getlistings", (req, res) => {
   db.ComingSoon.find().exec((err, data) => {
+    console.log(data, 'DATA');
     res.send(data); 
   })
 })

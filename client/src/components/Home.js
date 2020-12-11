@@ -34,6 +34,7 @@ class Home extends Component {
     window.scrollTo(0, 0);
     axios.get("/getlistings")
     .then(e => {
+      console.log(e.data, 'DATA')
       this.setState({
         listings: e.data
       });
@@ -162,7 +163,7 @@ class Home extends Component {
     if (this.state.listings.length == 0) {
       return (
         <div className="coming-soon-table">
-          <p>loading...</p>
+          <p className="text-light font-weight-bold">loading...</p>
         </div>
       )
     }
