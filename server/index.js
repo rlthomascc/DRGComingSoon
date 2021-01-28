@@ -14,7 +14,8 @@ const port = process.env.PORT || 3000;
 
 const app = express();
 
-
+//process.env.sid
+//process.env.token
 const client = require('twilio')(
   process.env.sid, //sid
   process.env.token, // TOKEN
@@ -290,6 +291,35 @@ Agent: ${data.agent}`,
 })
 .then(message => console.log(message.sid));
 
+//matt foster
+client.messages
+.create({
+  body: `${title}
+
+Address: ${data.address} 
+
+Description / Show Notes: ${data.desc}
+
+SqFt: ${data.sqft} 
+
+ETA: ${data.eta}
+
+Bed: ${data.bed} | Bath: ${data.bath}
+
+Photos: ${data.photoLink}
+
+Price: ${data.price}
+
+Status: ${data.status}
+
+Offer Premarket: ${data.premarket}
+
+Agent: ${data.agent}`,
+  from: '+12092555830',
+  to: '+12099863492',
+})
+.then(message => console.log(message.sid));
+
 
 //ellie
 client.messages
@@ -357,7 +387,6 @@ app.post('/addlisting', (req, res) => {
 
 app.get("/getlistings", (req, res) => {
   db.ComingSoon.find().exec((err, data) => {
-    console.log(data, 'DATA');
     res.send(data); 
   })
 })
@@ -365,7 +394,7 @@ app.get("/getlistings", (req, res) => {
 app.post("/editlisting", (req, res) => {
   var e = req.body;
   console.log(e, 'BODY INCOMING');
-  db.ComingSoon.deleteOne({ _id: req.body.id }).then((err, data) => {
+  db.ComingSoon.deleteOne({ _id: req.body._id }).then((err, data) => {
     res.send(data);
   })
   db.save({
