@@ -378,6 +378,93 @@ Agent: ${data.agent}`,
 })
 .then(message => console.log(message.sid));
 
+//nathan steingrebe
+client.messages
+.create({
+  body: `${title}
+
+Address: ${data.address} 
+
+Description / Show Notes: ${data.desc}
+
+SqFt: ${data.sqft} 
+
+ETA: ${data.eta}
+
+Bed: ${data.bed} | Bath: ${data.bath}
+
+Photos: ${data.photoLink}
+
+Price: ${data.price}
+
+Status: ${data.status}
+
+Offer Premarket: ${data.premarket}
+
+Agent: ${data.agent}`,
+  from: '+12092555830',
+  to: '+12092477863',
+})
+.then(message => console.log(message.sid));
+
+//Eddie Sanchez
+client.messages
+.create({
+  body: `${title}
+
+Address: ${data.address} 
+
+Description / Show Notes: ${data.desc}
+
+SqFt: ${data.sqft} 
+
+ETA: ${data.eta}
+
+Bed: ${data.bed} | Bath: ${data.bath}
+
+Photos: ${data.photoLink}
+
+Price: ${data.price}
+
+Status: ${data.status}
+
+Offer Premarket: ${data.premarket}
+
+Agent: ${data.agent}`,
+  from: '+12092555830',
+  to: '+12094999535',
+})
+.then(message => console.log(message.sid));
+
+//james garcia
+client.messages
+.create({
+  body: `${title}
+
+Address: ${data.address} 
+
+Description / Show Notes: ${data.desc}
+
+SqFt: ${data.sqft} 
+
+ETA: ${data.eta}
+
+Bed: ${data.bed} | Bath: ${data.bath}
+
+Photos: ${data.photoLink}
+
+Price: ${data.price}
+
+Status: ${data.status}
+
+Offer Premarket: ${data.premarket}
+
+Agent: ${data.agent}`,
+  from: '+12092555830',
+  to: '+12094844990',
+})
+.then(message => console.log(message.sid));
+
 
 //ellie
 client.messages
