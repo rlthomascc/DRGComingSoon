@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 
 // process.env.mongourl
 
-mongoose.connect(process.env.mongourl)
+await mongoose.connect(process.env.mongourl)
   .catch(err => console.log('Mongo connection error', err));
 
 
