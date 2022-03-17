@@ -465,6 +465,35 @@ Agent: ${data.agent}`,
 })
 .then(message => console.log(message.sid));
 
+//luke foster
+client.messages
+.create({
+  body: `${title}
+
+Address: ${data.address} 
+
+Description / Show Notes: ${data.desc}
+
+SqFt: ${data.sqft} 
+
+ETA: ${data.eta}
+
+Bed: ${data.bed} | Bath: ${data.bath}
+
+Photos: ${data.photoLink}
+
+Price: ${data.price}
+
+Status: ${data.status}
+
+Offer Premarket: ${data.premarket}
+
+Agent: ${data.agent}`,
+  from: '+12092555830',
+  to: '+12092726886',
+})
+.then(message => console.log(message.sid));
+
 
 //ellie
 client.messages
