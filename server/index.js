@@ -1,7 +1,6 @@
 require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
-const axios = require('axios');
 const { MessagingResponse } = require('twilio').twiml; // TWILIO TEXT
 const { VoiceResponse } = require('twilio').twiml; // TWILIO VOICE
 const db = require('../database/index');
