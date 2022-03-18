@@ -1,5 +1,5 @@
 require('dotenv').config();
-var mongoose = require("mongoose");
+const mongoose = require("mongoose");
 // dev
 
 // process.env.mongourl

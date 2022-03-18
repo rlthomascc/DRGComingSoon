@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const { MessagingResponse } = require('twilio').twiml; // TWILIO TEXT
 const { VoiceResponse } = require('twilio').twiml; // TWILIO VOICE
 const db = require('../database/index');
-var mongoose = require("mongoose");
+const mongoose = require("mongoose");
 
 
 
