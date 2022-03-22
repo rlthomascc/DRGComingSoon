@@ -24,8 +24,7 @@
     "mongoose": "^5.13.14",
     "react-awesome-modal": "^2.0.5",
     "request": "^2.81.0",
-    "webpack": "^4.28.3",
-    "webpack-cli": "^4.9.2"
+    "webpack": "^4.28.3"
   },
   "dependencies": {
     "axios": "^0.18.0",
