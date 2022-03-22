@@ -4,7 +4,6 @@ const bodyParser = require('body-parser');
 const { MessagingResponse } = require('twilio').twiml; // TWILIO TEXT
 const { VoiceResponse } = require('twilio').twiml; // TWILIO VOICE
 const db = require('../database/index');
-const mongoose = require("mongoose");
 
 //const port = 3000;
 const port = process.env.PORT || 3000;
@@ -18,9 +17,6 @@ const client = require('twilio')(
   process.env.sid, //sid
   process.env.token, // TOKEN
 );
-
-
-
 
 app.use(express.static(`${__dirname}/../client/dist`));
 app.use(bodyParser.urlencoded({ extended: false }));

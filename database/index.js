@@ -1,9 +1,10 @@
 require('dotenv').config();
-const mongoose = require('mongoose');
+//const mongoose = require('mongoose');
+import mongoose from 'mongoose';
+
 // dev
 
 // process.env.mongourl
-
 mongoose.connect(process.env.mongourl)
   .catch(err => console.log('Mongo connection error', err));
 
