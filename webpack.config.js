@@ -11,7 +11,7 @@ module.exports = {
   },
   module: {
     //changed from loaders to rules
-    loaders: [
+    rules: [
       {
         test: /\.jsx?/,
         include: SRC_DIR,
