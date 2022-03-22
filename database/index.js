@@ -1,6 +1,5 @@
 require('dotenv').config();
-//const mongoose = require('mongoose');
-import mongoose from 'mongoose';
+const mongoose = require('mongoose');
 
 // dev
 
