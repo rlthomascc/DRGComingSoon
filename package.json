@@ -10,7 +10,7 @@
     "react": "webpack -d --watch"
   },
   "heroku-run-build-script": true,
-  "author": "Randy Thomas",
+  "author": "Randy L Thomas",
   "license": "ISC",
   "devDependencies": {
     "axios": "^0.18.0",
